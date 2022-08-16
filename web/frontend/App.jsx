@@ -95,7 +95,7 @@ export default function App(props) {
             <NavigationMenu
               navigationLinks={[
                 {
-                  label: 'Home',
+                  label: 'Home nhe',
                   destination: '/',
                 },
               ]}
