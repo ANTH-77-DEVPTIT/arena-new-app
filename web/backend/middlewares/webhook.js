@@ -10,7 +10,7 @@ const create = async ({ shop, accessToken, topic }) => {
       data: {
         webhook: {
           topic,
-          address: process.env.BACKEND_URL + '/api/webhooks',
+          address: process.env.HOST + '/api/webhooks',
           format: 'json',
           fields: ['id'],
         },

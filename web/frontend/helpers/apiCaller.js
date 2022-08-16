@@ -7,7 +7,7 @@ const apiCaller = async (endpoint, method = 'GET', data = undefined, extraHeader
     let token = await getSessionToken(createApp(window.SHOPIFY_APP))
 
     let axiosConfig = {
-      url: window.BACKEND_URL + endpoint,
+      url: window.host + endpoint,
       method: method || 'GET',
       data: data || undefined,
       headers: {

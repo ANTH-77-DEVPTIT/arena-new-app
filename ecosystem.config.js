@@ -9,7 +9,6 @@ const {
   API_VERSION,
   PORT,
   BACKEND_PORT,
-  BACKEND_URL,
   SHOP,
 } = process.env
 
@@ -28,7 +27,6 @@ module.exports = {
         API_VERSION,
         PORT,
         BACKEND_PORT,
-        BACKEND_URL,
         SHOP,
       },
       env_development: {

@@ -22,9 +22,7 @@ function AppContainer(props) {
 
       // check session expired
       if (res.data.status !== 'RUNNING') {
-        return window.top.location.replace(
-          `${window.BACKEND_URL}/api/auth?shop=${window.shopOrigin}`,
-        )
+        return window.top.location.replace(`${window.HOST}/api/auth?shop=${window.shopOrigin}`)
       }
 
       actions.setStoreSetting(res.data)

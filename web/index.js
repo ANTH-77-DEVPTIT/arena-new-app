@@ -10,7 +10,6 @@ console.log(`| WEBHOOKS: ${process.env.WEBHOOKS}`)
 console.log(`| API_VERSION: ${process.env.API_VERSION}`)
 console.log(`| PORT: ${process.env.PORT}`)
 console.log(`| BACKEND_PORT: ${process.env.BACKEND_PORT}`)
-console.log(`| BACKEND_URL: ${process.env.BACKEND_URL}`)
 console.log(`| SHOP: ${process.env.SHOP}`)
 
 // @ts-check
@@ -194,17 +193,18 @@ export async function createServer(
 
 createServer().then(({ app }) =>
   app.listen(PORT, () => {
+    console.log(``)
     console.log('++++++++++++++++++++++++++++++++++++')
     console.log('+                                  +')
     console.log('+   Welcome to ArenaCommerce App   +')
     console.log('+                                  +')
     console.log('++++++++++++++++++++++++++++++++++++')
-    console.log(`|`)
-    console.log('| [SERVE] Install:')
-    console.log(`| ${process.env.HOST}/install`)
-    console.log(`|`)
-    console.log('| [DEV] Shopify App:')
-    console.log(`| ${process.env.HOST}/api/auth?shop=${process.env.SHOP}`)
-    console.log(`|`)
+    console.log(``)
+    console.log('[SERVE] Install:')
+    console.log(`${process.env.HOST}/install`)
+    console.log(``)
+    console.log('[DEV] Shopify App:')
+    console.log(`${process.env.HOST}/api/auth?shop=${process.env.SHOP}`)
+    console.log(``)
   }),
 )
