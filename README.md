@@ -241,12 +241,6 @@ ngrok http --subdomain=your_domain --region=ap 5000
 
 Step 4: Run source
 
-- with generate new app:
-
-```shell
-yarn dev --tunnel-url=https://your_domain.ap.ngrok.io:5000 --reset
-```
-
 - with dev mode:
 
 ```shell
