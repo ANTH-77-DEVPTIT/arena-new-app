@@ -1,5 +1,9 @@
 # Shopify App Template - Node
 
+This is a template for building a [Shopify app](https://shopify.dev/apps/getting-started) using Node and React. It contains the basics for building a Shopify app.
+
+Rather than cloning this repo, you can use your preferred package manager and the Shopify CLI with [these steps](#installing-the-template).
+
 ## STEP-BY-STEP
 
 Step 1: Init `.env` file and edit environment
@@ -30,10 +34,6 @@ yarn dev --tunnel-url=https://your_domain.ap.ngrok.io:5000
 yarn build
 yarn serve
 ```
-
-This is a template for building a [Shopify app](https://shopify.dev/apps/getting-started) using Node and React. It contains the basics for building a Shopify app.
-
-Rather than cloning this repo, you can use your preferred package manager and the Shopify CLI with [these steps](#installing-the-template).
 
 ## Benefits
 
