@@ -56,7 +56,7 @@ function PlansPage(props) {
       if (res.data?.confirmation_url) {
         window.top.location.replace(res.data.confirmation_url)
       } else {
-        window.top.location.replace(`${window.host}/api/auth?shop=${window.shopOrigin}`)
+        window.top.location.replace(`${window.BACKEND_URL}/api/auth?shop=${window.shopOrigin}`)
       }
     } catch (error) {
       console.log(error)
