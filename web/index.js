@@ -194,11 +194,11 @@ export async function createServer(
 createServer().then(({ app }) =>
   app.listen(PORT, () => {
     console.log(``)
-    console.log('++++++++++++++++++++++++++++++++++++')
-    console.log('+                                  +')
-    console.log('+   Welcome to ArenaCommerce App   +')
-    console.log('+                                  +')
-    console.log('++++++++++++++++++++++++++++++++++++')
+    console.log('+++++++++++++++++++Abel+++++++++++++++++++')
+    console.log('+                                        +')
+    console.log('+         Welcome to ArenaCommerce App   +')
+    console.log('+                                        +')
+    console.log('++++++++++++++++++Truong++++++++++++++++++')
     console.log(``)
     console.log('[SERVE] Install:')
     console.log(`${process.env.HOST}/install`)
