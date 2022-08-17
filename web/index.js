@@ -122,7 +122,7 @@ export async function createServer(
 
   // -------------------------------------------
   /**
-   * ADMIN ROUTES: Khi FE gửi một request về BE sẽ match đến đây
+   * ADMIN ROUTES
    */
   storeSettingRoute(app, Shopify)
   productRoute(app, Shopify)
