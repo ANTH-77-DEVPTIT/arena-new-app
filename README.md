@@ -22,13 +22,13 @@ ngrok http --subdomain=your_domain --region=ap 5000
 
 Step 4: Run source
 
-- with dev mode:
+- Dev mode:
 
 ```shell
 yarn dev --tunnel-url=https://your_domain.ap.ngrok.io:5000
 ```
 
-- with serve mode:
+- Serve mode:
 
 ```shell
 yarn build
