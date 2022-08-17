@@ -112,9 +112,10 @@ export default function App(props) {
                           pathname: '/',
                         },
                         {
-                          label: 'Products',
+                          label: 'Products nha',
                           pathname: '/products',
                         },
+                        // important here
                       ]}
                       secondaryActions={[
                         {

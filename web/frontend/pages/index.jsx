@@ -35,6 +35,7 @@ export default function HomePage(props) {
               <Stack.Item fill>
                 <TextContainer spacing="loose">
                   <Heading>Nice work on building a Shopify app 🎉</Heading>
+                  <Heading>Cái App của bạn mặc định sẽ chạy vào đây 🎉</Heading>
                   <p>
                     Your app is ready to explore! It contains everything you need to get started
                     including the{' '}

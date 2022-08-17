@@ -52,7 +52,7 @@ export function ProductsCard(props) {
           <Heading element="h4">
             TOTAL PRODUCTS
             <DisplayText size="medium">
-              <TextStyle variation="strong">{isLoadingCount ? '-' : data.data.count}</TextStyle>
+              <TextStyle variation="strong">{isLoadingCount ? '---' : data.data.count}</TextStyle>
             </DisplayText>
           </Heading>
         </TextContainer>

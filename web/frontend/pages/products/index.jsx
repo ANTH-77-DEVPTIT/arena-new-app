@@ -159,7 +159,7 @@ function ProductsPage(props) {
 
       <Card>
         <Card.Section>
-          <div>Total items: {count || 'loading..'}</div>
+          <div>Total items: {count || 'loading...gulp'}</div>
         </Card.Section>
         <Table
           {...props}

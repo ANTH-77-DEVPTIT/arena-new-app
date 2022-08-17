@@ -65,6 +65,15 @@ function AppContainer(props) {
     return <Preloader />
   }
 
+  /**
+   * App đầu tiên gọi đến api storeSetting:
+   * Tương ứng với mỗi path truyền từ AppContainer xuống
+   * nó sẽ tìm vào một pages thích hợp
+   * - Nhưng trước tiên nó phải check xem accessToken trong storeSetting có tích hợp chưa, Đó là một mã cố định
+   * - accessToken đúng nó sẽ gọi đến BE thực hiện
+   * - BE phải dựa vào một AppToken(token này thay đối mỗi khi page re-render) để gọi đến Shopify admin api để lấy dữ liệu trả về cho FE
+   *
+   */
   return <div>{storeSetting?.acceptedAt ? children : <Privacy onAction={acceptPrivacy} />}</div>
 }
 
