@@ -95,8 +95,20 @@ export default function App(props) {
             <NavigationMenu
               navigationLinks={[
                 {
-                  label: 'Home nhe',
-                  destination: '/',
+                  label: 'Products',
+                  destination: '/products',
+                },
+                {
+                  label: 'Products 1',
+                  destination: '/products_test',
+                },
+                {
+                  label: 'Customers',
+                  destination: '/customers',
+                },
+                {
+                  label: 'Orders',
+                  destination: '/orders',
                 },
               ]}
             />
@@ -108,12 +120,21 @@ export default function App(props) {
                     <AppNavigation
                       primaryActions={[
                         {
-                          label: 'Home',
-                          pathname: '/',
+                          label: 'Products',
+                          pathname: '/products',
                         },
                         {
-                          label: 'Products nha',
-                          pathname: '/products',
+                          label: 'Products 1',
+                          pathname: '/products_test',
+                        },
+                        {
+                          label: 'Customers',
+                          icon: 'CustomersMajor',
+                          pathname: '/customers',
+                        },
+                        {
+                          label: 'Orders',
+                          pathname: '/orders',
                         },
                         // important here
                       ]}

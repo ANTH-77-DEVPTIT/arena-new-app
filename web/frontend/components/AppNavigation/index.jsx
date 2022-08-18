@@ -2,7 +2,12 @@ import PropTypes from 'prop-types'
 import { ActionList, Button, Popover, Stack } from '@shopify/polaris'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useMemo, useState } from 'react'
-import { MaximizeMinor, MinimizeMinor, HorizontalDotsMinor } from '@shopify/polaris-icons'
+import {
+  MaximizeMinor,
+  MinimizeMinor,
+  HorizontalDotsMinor,
+  CustomersMajor,
+} from '@shopify/polaris-icons'
 import Divider from '../Divider'
 
 AppNavigation.propTypes = {

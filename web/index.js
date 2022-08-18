@@ -20,6 +20,7 @@ import { AppInstallations } from './app_installations.js'
 import webhookRoute from './backend/routes/webhook/index.js'
 import storeSettingRoute from './backend/routes/admin/store_setting.js'
 import productRoute from './backend/routes/admin/product.js'
+import productRouteTest from './backend/routes/admin/products_test.js'
 import billingRoute from './backend/routes/admin/billing.js'
 
 const USE_ONLINE_TOKENS = false
@@ -95,6 +96,9 @@ export async function createServer(
   // -------------------------------------------
   /**
    * STOREFRONT ROUTES
+   * Routes này kiểu như là mở rộng trải nghiệm mua hàng trên shopify ra các môi trường web khác,
+   * thiết bị di động vượt ra khỏi kênh bán hàng của shopify
+   * Nó cho phép ta làm việc với dữ liệu của khách hàng và sản phẩm, đồng thời tạo các custom storefronts
    */
   // -------------------------------------------
 
@@ -126,6 +130,7 @@ export async function createServer(
    */
   storeSettingRoute(app, Shopify)
   productRoute(app, Shopify)
+  productRouteTest(app, Shopify)
   billingRoute(app, Shopify)
   // -------------------------------------------
 

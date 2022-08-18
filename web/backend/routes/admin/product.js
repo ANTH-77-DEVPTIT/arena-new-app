@@ -62,7 +62,6 @@ export default function productRoute(app, Shopify) {
   app.put('/api/products/:id', async (req, res) => {
     try {
       const session = await verifyToken(req, res, app, Shopify)
-      console.log('🚀 ~ file: product.js ~ line 65 ~ app.put ~ session', session)
       const { shop, accessToken } = session
 
       const { id } = req.params

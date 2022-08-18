@@ -59,7 +59,7 @@ const apiCaller = async (params) => {
       },
       data,
     }
-
+    //xử dụng axios để gửi config đến shopify admin api
     const res = await axios(config)
 
     let payload = res.data

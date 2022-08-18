@@ -8,6 +8,8 @@ import validateParams from '../helpers/validateParams.js'
 const count = async ({ shop, accessToken, product_id }) => {
   try {
     validateParams({ shop, accessToken, product_id })
+    //nhận về một biến đếm của tất cả các thằng products variants
+    // count ở đây là nó đếm có bao nhiêu products variant trong products, fields variants ấy
 
     return await apiCaller({
       shop,
