@@ -1,6 +1,7 @@
 import verifyToken from '../../auth/verifyToken.js'
 import ResponseHandler from '../../helpers/responseHandler.js'
 import ProductMiddlewareImage from '../../middlewares/product_image.js'
+import MulterUpload from '../../connector/multer/index.js'
 
 export default function productRouteImage(app, Shopify) {
   //count
@@ -34,25 +35,28 @@ export default function productRouteImage(app, Shopify) {
       }
     }),
     //create
-    app.post('/api/products/:product_id/images', async (req, res) => {
-      try {
-        const session = await verifyToken(req, res, app, Shopify)
-        const { shop, accessToken } = session
+    app.post(
+      '/api/products/:product_id/images',
+      MulterUpload.array('images', 250),
+      async (req, res) => {
+        try {
+          const session = await verifyToken(req, res, app, Shopify)
+          const { product_id } = req.params
+          const { shop, accessToken } = session
 
-        console.log('req.req.files', req.files)
+          const data = await ProductMiddlewareImage.create({
+            shop,
+            accessToken,
+            data: req.files,
+            product_id,
+          })
 
-        // const data = await ProductMiddlewareImage.create({
-        //   shop,
-        //   accessToken,
-        //   data: req.body,
-        //   product_id,
-        // })
-
-        // return ResponseHandler.success(res, data)
-      } catch (error) {
-        // return ResponseHandler.error(res, error)
-      }
-    })
+          return ResponseHandler.success(res, data)
+        } catch (error) {
+          return ResponseHandler.error(res, error)
+        }
+      },
+    )
 
   app.put('/api/products/:product_id/images', async (req, res) => {
     try {

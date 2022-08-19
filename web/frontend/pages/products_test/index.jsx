@@ -8,6 +8,7 @@ import ConfirmDelete from './ConfirmDelete'
 import CreateForm from './CreateForm'
 import ProductApi from '../../apis/product_test'
 import ProductImageApi from '../../apis/product_test_images'
+// import getBase64 from '../../helpers/getBase64.js'
 
 function ProductsPage(props) {
   const { actions, notiy, loading } = props
@@ -76,7 +77,15 @@ function ProductsPage(props) {
       }
 
       const imagesFile = formData['images'].value
-      console.log('🚀 ~ file: index.jsx ~ line 79 ~ handleSubmit ~ imagesFile', imagesFile)
+
+      // let imagesBase64 = []
+
+      // if (imagesFile) {
+      //   imagesFile.forEach((file) => {
+      //     imagesBase64.push(getBase64(file))
+      //   })
+      // }
+      // console.log('imagesBase64', imagesBase64)
 
       let res = null
       let resImage = null

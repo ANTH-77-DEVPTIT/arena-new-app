@@ -9,7 +9,6 @@ const find = async (product_id) => {
 }
 
 const create = async (product_id, images) => {
-  console.log('🚀  images', images)
   const formData = new FormData()
 
   images.forEach((item) => formData.append('images', item))

@@ -1,5 +1,6 @@
 import apiCaller from '../helpers/apiCaller.js'
 import validateParams from '../helpers/validateParams.js'
+import base64Encode from '../helpers/base64Encode.js'
 
 /**
  * https://shopify.dev/api/admin-rest/2021-10/resources/product-image
@@ -48,17 +49,24 @@ const findById = async ({ shop, accessToken, product_id, image_id }) => {
 }
 
 const create = async ({ shop, accessToken, product_id, data }) => {
-  console.log('🚀 ~ file: chay vo day data', data)
+  console.log('🚀 ~ file: middleware', data)
   try {
+    const images = []
+
+    data.forEach((file) => {
+      images.push(file.buffer.toString('base64'))
+    })
+
+    console.log('images', images)
     validateParams({ shop, accessToken, product_id, data })
 
-    return await apiCaller({
-      shop,
-      accessToken,
-      endpoint: `products/${product_id}/images.json`,
-      method: 'POST',
-      data,
-    })
+    // return await apiCaller({
+    //   shop,
+    //   accessToken,
+    //   endpoint: `products/${product_id}/images.json`,
+    //   method: 'POST',
+    //   data,
+    // })
   } catch (error) {
     throw error
   }
