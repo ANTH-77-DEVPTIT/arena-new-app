@@ -48,6 +48,7 @@ const findById = async ({ shop, accessToken, product_id, image_id }) => {
 }
 
 const create = async ({ shop, accessToken, product_id, data }) => {
+  console.log('🚀 ~ file: chay vo day data', data)
   try {
     validateParams({ shop, accessToken, product_id, data })
 

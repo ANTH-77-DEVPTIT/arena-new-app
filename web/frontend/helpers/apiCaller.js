@@ -5,8 +5,7 @@ import { createApp } from '@shopify/app-bridge'
 const apiCaller = async (endpoint, method = 'GET', data = undefined, extraHeaders = undefined) => {
   try {
     let token = await getSessionToken(createApp(window.SHOPIFY_APP))
-    console.log('🚀 ~ file: apiCaller.js ~ token', token)
-    //cái token nay nó lấy ra và kèm theo vào authrizatio bên trong headers
+    //cái token nay nó lấy ra và kèm theo vào authrization bên trong headers
     //để frontend thao tác được với be thì khi axios gửi đi phải kèm them thằng này.(JWT)
 
     let axiosConfig = {

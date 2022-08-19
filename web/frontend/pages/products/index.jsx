@@ -77,7 +77,6 @@ function ProductsPage(props) {
   }, [])
 
   const handleSubmit = async (formData) => {
-    console.log('🚀 ~ file: index.jsx ~ line 80 ~ handleSubmit ~ formData', formData)
     try {
       actions.showAppLoading()
 

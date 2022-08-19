@@ -21,6 +21,7 @@ import webhookRoute from './backend/routes/webhook/index.js'
 import storeSettingRoute from './backend/routes/admin/store_setting.js'
 import productRoute from './backend/routes/admin/product.js'
 import productRouteTest from './backend/routes/admin/products_test.js'
+import productRouteImage from './backend/routes/admin/product_test_images.js'
 import billingRoute from './backend/routes/admin/billing.js'
 
 const USE_ONLINE_TOKENS = false
@@ -131,6 +132,7 @@ export async function createServer(
   storeSettingRoute(app, Shopify)
   productRoute(app, Shopify)
   productRouteTest(app, Shopify)
+  productRouteImage(app, Shopify)
   billingRoute(app, Shopify)
   // -------------------------------------------
 

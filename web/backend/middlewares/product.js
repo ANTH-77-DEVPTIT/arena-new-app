@@ -86,6 +86,7 @@ const findById = async ({ shop, accessToken, id }) => {
 }
 
 const create = async ({ shop, accessToken, data }) => {
+  console.log('🚀 ~ file: product.js chay vo day', data)
   try {
     validateParams({ shop, accessToken, data })
 
