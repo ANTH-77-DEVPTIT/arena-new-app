@@ -76,9 +76,9 @@ function ProductsPage(props) {
         product_type: formData.product_type.value,
       }
 
-      const imagesFile = formData['images'].value
+      // const imagesFile = formData['images'].value
 
-      // let imagesBase64 = []
+      // let imagesBase64 = [] handle base64 frontend
 
       // if (imagesFile) {
       //   imagesFile.forEach((file) => {
@@ -97,10 +97,10 @@ function ProductsPage(props) {
       } else {
         //create
         res = await ProductApi.create(data)
-        const product_id = res?.data.product.id
-        if (product_id && imagesFile) {
-          resImage = await ProductImageApi.create(product_id, imagesFile)
-        }
+        // const product_id = res?.data.product.id
+        // if (product_id && imagesFile) {
+        // resImage = await ProductImageApi.create(product_id, imagesFile)
+        // }
       }
 
       if (!res.success) {
