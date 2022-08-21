@@ -35,3 +35,8 @@ module.exports = {
     },
   ],
 }
+/**
+ * tham khao file tu he thong dien tu
+ * apps: la mot mang chua cau hinh cho quy trinh trien khai
+ * deploy: la mot obj chua dung config cho qui trinh deploys app
+ */
