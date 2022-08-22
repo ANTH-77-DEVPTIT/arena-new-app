@@ -11,6 +11,7 @@ export default function productRouteImage(app, Shopify) {
       const { shop, accessToken } = session
 
       const { product_id } = req.params
+      console.log('keo chua')
 
       const data = await ProductMiddlewareImage.count({ shop, accessToken, product_id })
 

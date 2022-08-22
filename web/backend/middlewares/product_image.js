@@ -49,22 +49,21 @@ const findById = async ({ shop, accessToken, product_id, image_id }) => {
 }
 
 const create = async ({ shop, accessToken, product_id, data }) => {
-  console.log('🚀 ~ file: product_image.js ~ line 52 ~ create ~ product_id', product_id)
   console.log('🚀 ~ file: middleware 1', data)
   try {
     validateParams({ shop, accessToken, product_id, data })
-    // let images = {}
-    // images.product_id = product_id
-    // images.filename = [...data.filename]
+    let images = {}
+    images.product_id = product_id
 
-    // data.forEach((file) => {
-    //   images.push(file.buffer.toString('base64'))
-    //   images.filename = [...images.filename, file.filename]
-    //   images.attachment = [...images.attachment, file.buffer.toString('base64')]
-    //   images.attachment = { ...images, attachment: file.buffer.toString('base64') }
-    // })
+    data.forEach((file) => {
+      // images.push(file.buffer.toString('base64'))
+      images = { ...images.filename, filename: file.originalname }
+      // images.attachment = images.push(file.buffer.toString('base64'))
+      images = { ...images.attachment, attachment: file.buffer.toString('base64') }
+      // images.attachment = { ...images, attachment: file.buffer.toString('base64') }
+    })
 
-    // console.log('images', images)
+    console.log('images', images)
 
     return await apiCaller({
       shop,

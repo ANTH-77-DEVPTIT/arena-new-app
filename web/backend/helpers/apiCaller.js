@@ -45,7 +45,6 @@ const getPageInfo = (link) => {
  */
 const apiCaller = async (params) => {
   const { shop, accessToken, endpoint, method, data, extraHeaders, pageInfo } = params
-  console.log('🚀 ~ images ~ data', data)
 
   try {
     validateParams({ shop, accessToken, endpoint })
